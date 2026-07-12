@@ -74,7 +74,7 @@ AgriVision-AI-MVP/
 python crop_monitor.py
 ```
 
-Frontend
+## Frontend
 
 cd dashboard
 npm install
