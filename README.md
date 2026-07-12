@@ -54,19 +54,17 @@ npm install
      npm start
 
 
-📊 Workflow
+## 📊 Workflow
 Issues → Track tasks
 
 Project Board → To Do / In Progress / Done
 
 Branches & PRs → Development cycle
 
-🌍 Impact
+## 🌍 Impact
 Early detection → Higher yield
 
 AI alerts → Reduced farmer risk
 
 Scalable → Future IoT sensor integration
 
-
-5.    
