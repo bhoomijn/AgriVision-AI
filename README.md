@@ -1,78 +1,72 @@
-# AgriVision-AI-MVP 🌱
+# AgriVision-AI 🌱
 
-AI-powered crop monitoring MVP for **Build in AI Hackathon**.  
-Detects early crop issues, provides alerts, and showcases a prototype dashboard using **Python + React + Tailwind**.
-
----
-
-## 🚀 Problem Statement
-Farmers often face delayed detection of crop diseases and soil issues, leading to reduced yield and financial loss.  
-Traditional monitoring methods are manual, time-consuming, and error-prone.
+Smart agriculture assistant powered by **AI & Drone technology**.  
+Built as part of the **Build in AI Hackathon** to showcase how machine learning can help farmers detect crop issues early and improve yield.
 
 ---
 
-## 💡 Solution
-AgriVision-AI uses **AI + Drone imagery** to:
-- Detect early crop stress and diseases
-- Provide real-time alerts
-- Visualize farm health on a dashboard
-- Suggest preventive actions
+## 🔍 Overview
+AgriVision-AI is a prototype that:
+- Analyzes aerial images from drones
+- Detects crop stress and disease patterns
+- Provides actionable alerts
+- Displays insights on a modern dashboard
 
 ---
 
-## 🛠️ Tech Stack
-- **Backend:** Python (AI/ML models)
-- **Frontend:** React + Tailwind CSS
-- **Data:** Drone images / sample datasets
-- **Version Control:** GitHub Projects + Issues workflow
+## 🛠️ Technology
+- **AI/ML:** Python (image analysis, prediction models)  
+- **Frontend:** React + Tailwind CSS  
+- **Data:** Drone imagery & sample datasets  
+- **Collaboration:** GitHub Projects + Issues workflow  
 
 ---
 
-## 📂 Repository Structure
-| File/Folder         | Description                          |
-|---------------------|--------------------------------------|
-| `drone_module.py`   | Captures and processes aerial images |
-| `dashboard/`        | React + Tailwind frontend prototype  |
-| `README.md`         | Project overview & setup             |
+## 📂 Structure
+
+AgriVision-AI/
+├── backend/          # Python AI modules
+├── dashboard/        # React + Tailwind frontend
+├── docs/             # Pitch deck & resources
+└── README.md         # Project overview
+
 
 ---
 
-## ⚡ Setup Instructions
-1. Clone the repo:
+## ⚡ Quick Start
+1. Clone the repository:
    ```bash
    git clone https://github.com/bhoomijn/AgriVision-AI-MVP.git
    cd AgriVision-AI-MVP
 
-2. Install dependencies:
+2.  Install dependencies:
 
-   pip install -r requirements.txt
-   npm install
-
-3. Run backend:
-
-  python drone_module.py
-
-4. Run frontend
-
-   npm start
+    pip install -r requirements.txt
+npm install
 
 
+3.  Run backend:
 
-   📊 Project Workflow
-GitHub Issues → Track tasks
+    python backend/app.py
 
-Projects Board → To Do / In Progress / Done
+4.  Start backend:
 
-Branches + PRs → Development cycle
+     npm start
 
 
-🎯 Impact
-Early detection → Higher crop yield
+📊 Workflow
+Issues → Track tasks
+
+Project Board → To Do / In Progress / Done
+
+Branches & PRs → Development cycle
+
+🌍 Impact
+Early detection → Higher yield
 
 AI alerts → Reduced farmer risk
 
-Scalable dashboard → Future integration with IoT sensor
+Scalable → Future IoT sensor integration
 
 
-
-  
+5.    
