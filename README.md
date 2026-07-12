@@ -80,7 +80,7 @@ cd dashboard
 npm install
 npm start
 
-Together, let’s empower farmers with AI-driven insights for healthier crops, better decisions, and a sustainable future. 🌱
+## Together, let’s empower farmers with AI-driven insights for healthier crops, better decisions, and a sustainable future. 🌱
 
 
 
