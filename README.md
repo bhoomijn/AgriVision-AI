@@ -48,10 +48,14 @@ cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
 
-🏆 Hackathon Context
+---
+
+## 🏆 Hackathon Context
 This project was developed for Build in AI for India Hackathon 2026.
 Our vision is to bridge technology and agriculture by providing farmers with AI-driven insights and accessible dashboards.
 
-📜 License
+---
+
+## 📜 License
 MIT License © 2026 AgriVision-AI Team
 
