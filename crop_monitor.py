@@ -1,5 +1,6 @@
 # crop_monitor.py
 # AI-powered crop monitoring MVP for Build in AI Hackathon
+# Dummy ML model for crop health detection
 
 def detect_crop_issue(temperature, humidity):
     if temperature > 35 and humidity < 30:
