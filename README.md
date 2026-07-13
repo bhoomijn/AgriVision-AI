@@ -1,70 +1,57 @@
-# AgriVision-AI 🌱
+# 🌱 AgriVision-AI MVP
 
-Smart agriculture assistant powered by **AI & Drone technology**.  
-Built as part of the **Build in AI Hackathon** to showcase how machine learning can help farmers detect crop issues early and improve yield.
-
----
-
-## 🔍 Overview
-AgriVision-AI is a prototype that:
-- Analyzes aerial images from drones
-- Detects crop stress and disease patterns
-- Provides actionable alerts
-- Displays insights on a modern dashboard
+AI-powered crop monitoring MVP built for **Build in AI for India Hackathon 2026**.  
+Our mission: Empower farmers with accessible AI insights, early alerts, and a user-friendly dashboard.
 
 ---
 
-## 🛠️ Technology
-- **AI/ML:** Python (image analysis, prediction models)  
-- **Frontend:** React + Tailwind CSS  
-- **Data:** Drone imagery & sample datasets  
-- **Collaboration:** GitHub Projects + Issues workflow  
+## 🚀 Key Highlights
+- 🌾 **Crop Health Monitoring** → Detects early crop issues using AI models
+- 🔔 **Real-time Alerts** → Notifies farmers about potential risks
+- 📊 **Interactive Dashboard** → Built with React + Tailwind
+- ⚡ **FastAPI Backend** → Lightweight and scalable API services
+- ☁️ **Cloud Deployment** → Vercel (frontend) + Render (backend)
 
 ---
 
-## 📂 Structure
+## 🛠️ Tech Stack
+- **Frontend:** React, Tailwind CSS  
+- **Backend:** FastAPI (Python)  
+- **Deployment:** Vercel + Render  
+- **Version Control:** Git + GitHub  
 
-AgriVision-AI/
-├── backend/          # Python AI modules
-├── dashboard/        # React + Tailwind frontend
-├── docs/             # Pitch deck & resources
-└── README.md         # Project overview
+---
+
+## 📂 Project Structure
+
 
 
 ---
 
-## ⚡ Quick Start
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/bhoomijn/AgriVision-AI-MVP.git
-   cd AgriVision-AI-MVP
+## ⚡ Getting Started
 
-2.  Install dependencies:
+### 1️⃣ Clone the repo
+```bash
+git clone https://github.com/bhoomijn/AgriVision-AI-MVP.git
+cd AgriVision-AI-MVP
+```
 
-    pip install -r requirements.txt
+2️⃣ Frontend setup
+
+cd frontend
 npm install
+npm start
 
+3️⃣ Backend setup
 
-3.  Run backend:
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
 
-    python backend/app.py
+🏆 Hackathon Context
+This project was developed for Build in AI for India Hackathon 2026.
+Our vision is to bridge technology and agriculture by providing farmers with AI-driven insights and accessible dashboards.
 
-4.  Start backend:
-
-     npm start
-
-
-## 📊 Workflow
-Issues → Track tasks
-
-Project Board → To Do / In Progress / Done
-
-Branches & PRs → Development cycle
-
-## 🌍 Impact
-Early detection → Higher yield
-
-AI alerts → Reduced farmer risk
-
-Scalable → Future IoT sensor integration
+📜 License
+MIT License © 2026 AgriVision-AI Team
 
