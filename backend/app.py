@@ -1,12 +1,12 @@
+
 from flask import Flask, jsonify
 import numpy as np
 
 app = Flask(__name__)
 
-# Dummy crop health check using NumPy
+# API endpoint for crop health status
 @app.route('/api/crop-health', methods=['GET'])
 def crop_health():
-    # Example: random health status
     health_score = np.random.rand()
     if health_score > 0.5:
         status = "Healthy"
