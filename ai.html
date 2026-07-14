@@ -56,17 +56,16 @@
 
                 <div class="upload-box">
 
+    <input type="file" id="cropImage" accept="image/*">
 
-                    <input type="file" id="cropImage">
+    <img id="previewImage" 
+         style="display:none; width:250px; border-radius:15px; margin-top:15px;">
 
+    <button id="scanBtn">
+        Scan Crop
+    </button>
 
-                    <button id="scanBtn">
-                        Scan Crop
-                    </button>
-
-
-                </div>
-
+</div>
 
             </div>
 
@@ -124,20 +123,23 @@
 
         <div class="result-card" id="result">
 
-            <h2>
-                🍃 Upload image to get prediction
-            </h2>
+    <h2>
+        🍃 Upload image to get prediction
+    </h2>
 
-            <p>
-                Disease result will appear here
-            </p>
+    <p>
+        Disease result will appear here
+    </p>
 
-            <h3>
-                Confidence: --
-            </h3>
+    <h3>
+        Confidence: --
+    </h3>
 
-        </div>
+    <p id="treatment">
+        Treatment recommendation will appear here
+    </p>
 
+</div>
 
     </section>
 
