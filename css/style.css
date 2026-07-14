@@ -1,0 +1,1093 @@
+/* =========================
+   AgriVision AI
+   Premium Global CSS
+   Part 1
+========================= */
+
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* Global Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+    background: #061b10;
+    color: white;
+    overflow-x: hidden;
+
+}
+
+
+/* Color Variables */
+
+:root {
+
+    --primary: #22c55e;
+    --secondary: #16a34a;
+    --dark: #061b10;
+    --card: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.15);
+    --text: #d1d5db;
+
+}
+
+
+
+/* Background Glow */
+
+body::before {
+
+    content: "";
+    position: fixed;
+
+    width: 600px;
+    height: 600px;
+
+    background: #22c55e;
+
+    filter: blur(180px);
+
+    top: -250px;
+    right: -200px;
+
+    opacity: .25;
+
+    z-index: -1;
+
+}
+
+
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 500px;
+    height: 500px;
+
+    background: #16a34a;
+
+    filter: blur(180px);
+
+    bottom: -200px;
+    left: -200px;
+
+    opacity: .2;
+
+    z-index: -1;
+
+}
+
+
+
+/* Common Container */
+
+.container {
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+
+/* Navbar */
+
+nav {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 8%;
+
+
+    background: rgba(0, 0, 0, .35);
+
+    backdrop-filter: blur(20px);
+
+    border-bottom: 1px solid var(--border);
+
+    z-index: 1000;
+
+}
+
+
+
+.logo {
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    color: var(--primary);
+
+}
+
+
+
+nav ul {
+
+    display: flex;
+
+    gap: 30px;
+
+    list-style: none;
+
+}
+
+
+
+nav ul li a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: .3s;
+
+}
+
+
+
+nav ul li a:hover {
+
+    color: var(--primary);
+
+}
+
+
+
+/* Buttons */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 14px 32px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+
+
+.btn-primary {
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+
+
+.btn-primary:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 0 25px var(--primary);
+
+}
+
+
+
+.btn-outline {
+
+    border: 2px solid var(--primary);
+
+    color: var(--primary);
+
+}
+
+
+
+.btn-outline:hover {
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+
+
+/* Glass Card */
+
+.glass {
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .35);
+
+}
+
+
+
+/* Section */
+
+section {
+
+    padding: 100px 8%;
+
+}
+
+
+
+/* Headings */
+
+.section-title {
+
+    text-align: center;
+
+    font-size: 42px;
+
+    margin-bottom: 50px;
+
+}
+
+
+
+.section-title span {
+
+    color: var(--primary);
+
+}
+
+
+
+/* Common Card */
+
+.card {
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    backdrop-filter: blur(15px);
+
+    transition: .4s;
+
+}
+
+
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: var(--primary);
+
+}
+
+
+
+/* Animation */
+
+.fade-up {
+
+    animation: fadeUp 1s ease;
+
+}
+
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #2ecc71;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 30px;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.primary-btn {
+    background: #2ecc71;
+    color: white;
+}
+
+.secondary-btn {
+    border: 2px solid #2ecc71;
+    color: #2ecc71;
+}
+
+
+/* =========================
+   AI SCANNER ANIMATION
+========================= */
+
+.scanner-box {
+    width: 350px;
+    height: 350px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.scanner-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scan-line {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #2ecc71;
+    top: 0;
+    animation: scan 3s infinite;
+}
+
+@keyframes scan {
+
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: 95%;
+    }
+
+    100% {
+        top: 0;
+    }
+
+}
+
+
+/* =========================
+   DASHBOARD CARDS
+========================= */
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 50px 8%;
+}
+
+
+.dashboard-card {
+
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+
+}
+
+
+.dashboard-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+
+.dashboard-card h3 {
+
+    font-size: 18px;
+    margin-bottom: 15px;
+
+}
+
+
+.dashboard-card .number {
+
+    font-size: 35px;
+    font-weight: bold;
+    color: #2ecc71;
+
+}
+
+
+/* =========================
+   CHARTS
+========================= */
+
+
+.chart-box {
+
+    padding: 30px;
+    border-radius: 20px;
+    margin: 40px 8%;
+    background: rgba(255, 255, 255, 0.08);
+
+}
+
+
+.chart-bar {
+
+    height: 20px;
+    border-radius: 20px;
+    margin: 15px 0;
+    background: #2ecc71;
+
+}
+
+
+/* =========================
+   WEATHER CARDS
+========================= */
+
+
+.weather-section {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 50px 8%;
+
+}
+
+
+.weather-card {
+
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+
+}
+
+
+.weather-card h2 {
+
+    font-size: 35px;
+    color: #2ecc71;
+
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+
+@media(max-width:900px) {
+
+    .hero {
+
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .dashboard-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .weather-section {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+}
+
+
+@media(max-width:600px) {
+
+
+    .dashboard-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .scanner-box {
+
+        width: 280px;
+        height: 280px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 32px;
+
+    }
+
+}
+
+/* =========================
+   AI DETECTION PAGE
+========================= */
+
+.ai-section {
+    padding: 80px 8%;
+}
+
+.ai-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.ai-content {
+    max-width: 550px;
+}
+
+
+.ai-content h1 {
+    font-size: 45px;
+}
+
+
+.ai-content p {
+    font-size: 18px;
+    opacity: 0.8;
+    margin: 20px 0;
+}
+
+
+.upload-box {
+
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+
+}
+
+
+.upload-box input {
+
+    margin-bottom: 20px;
+
+}
+
+
+.upload-box button {
+
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #2ecc71;
+    color: white;
+    cursor: pointer;
+
+}
+
+
+/* AI SCANNER CARD */
+
+.scanner-card {
+
+    width: 350px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.08);
+
+}
+
+
+.scan-circle {
+
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    border: 4px solid #2ecc71;
+    animation: pulse 2s infinite;
+
+}
+
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+.progress {
+
+    height: 10px;
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+
+
+.progress div {
+
+    height: 100%;
+    width: 70%;
+    background: #2ecc71;
+    animation: loading 2s infinite;
+
+}
+
+
+@keyframes loading {
+
+    from {
+        width: 10%;
+    }
+
+    to {
+        width: 95%;
+    }
+
+}
+
+
+
+/* RESULT CARD */
+
+.prediction {
+
+    padding: 50px 8%;
+    text-align: center;
+
+}
+
+
+.result-card {
+
+    margin: auto;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.08);
+
+}
+
+
+.result-card h2 {
+
+    color: #2ecc71;
+
+}
+
+
+.treatment {
+
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(46, 204, 113, 0.1);
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:800px) {
+
+    .ai-container {
+
+        flex-direction: column;
+
+    }
+
+    .scanner-card {
+
+        width: 280px;
+
+    }
+
+}
+
+/* =========================
+   DASHBOARD PAGE
+========================= */
+
+.dashboard-page {
+
+    padding: 80px 8%;
+    text-align: center;
+
+}
+
+
+.dashboard-page h1 {
+
+    font-size: 45px;
+    margin-bottom: 15px;
+
+}
+
+
+.dashboard-page>p {
+
+    opacity: 0.8;
+    margin-bottom: 40px;
+
+}
+
+
+/* Dashboard card animation */
+
+.dashboard-card {
+
+    animation: cardUp 0.8s ease;
+
+}
+
+
+@keyframes cardUp {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+/* Weather animation */
+
+.weather-card {
+
+    transition: 0.3s;
+
+}
+
+
+.weather-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+
+
+/* Chart animation */
+
+.chart-box {
+
+    overflow: hidden;
+
+}
+
+
+.chart-bar {
+
+    animation: chartGrow 2s ease;
+
+}
+
+
+@keyframes chartGrow {
+
+    from {
+
+        width: 0;
+
+    }
+
+}
+
+
+
+/* Dashboard mobile */
+
+@media(max-width:600px) {
+
+
+    .dashboard-page h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .dashboard-card {
+
+        padding: 20px;
+
+    }
+
+
+}
+
+/* =========================
+   HOME PREMIUM POLISH
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: #2ecc71;
+}
+
+
+
+/* Hero Animation */
+
+.hero-content {
+
+    animation: fadeLeft 1s ease;
+
+}
+
+
+.scanner-box {
+
+    animation: floatBox 4s infinite ease-in-out;
+
+}
+
+
+@keyframes fadeLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes floatBox {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+
+/* Feature Cards */
+
+.feature-card {
+
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    transition: 0.3s;
+
+}
+
+
+.feature-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+
+
+/* Contact Section */
+
+.contact-section {
+
+    padding: 70px 8%;
+    text-align: center;
+
+}
+
+
+.contact-section input,
+.contact-section textarea {
+
+    width: 80%;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    border: none;
+
+}
+
+
+.contact-section button {
+
+    padding: 14px 35px;
+    border-radius: 30px;
+    border: none;
+    background: #2ecc71;
+    color: white;
+    cursor: pointer;
+
+}
+
+
+
+/* Footer */
+
+footer {
+
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+
+}
