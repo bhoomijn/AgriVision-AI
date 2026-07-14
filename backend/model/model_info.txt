@@ -1,0 +1,2 @@
+AgriVision AI Model
+Demo Disease Detection Model
