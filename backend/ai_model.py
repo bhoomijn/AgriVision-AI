@@ -9,14 +9,11 @@ MODEL_URL = "https://api-inference.huggingface.co/models/malifiahm/plant_disease
 
 def predict_disease(image):
 
-    try:
-
-        if not HF_TOKEN:
-            return {
-                "disease": "API Token Missing",
-                "confidence": "0%",
-                "treatment": "Add HF_TOKEN in Render Environment Variables."
-            }
+    return {
+        "disease": "AI Model Setup Pending",
+        "confidence": "0%",
+        "treatment": "AI integration will be connected next."
+    }
 
 
         headers = {
