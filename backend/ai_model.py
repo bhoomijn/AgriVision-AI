@@ -12,11 +12,13 @@ def predict_disease(image):
 
     try:
 
-        image = image.convert("RGB")
+       image = image.convert("RGB")
 
-        result = classifier(image)
+result = classifier(image)
 
-        prediction = result[0]
+print("AI RESULT:", result)
+
+prediction = result[0]
 
         return {
             "disease": prediction["label"],
