@@ -5,6 +5,29 @@ const input = document.getElementById("cropImage");
 
 
 // =========================
+// Image Preview
+// =========================
+
+if (input) {
+
+    input.addEventListener("change", () => {
+
+        const preview = document.getElementById("previewImage");
+
+        if (input.files.length && preview) {
+
+            preview.src = URL.createObjectURL(input.files[0]);
+            preview.style.display = "block";
+
+        }
+
+    });
+
+}
+
+
+
+// =========================
 // AI Disease Detection
 // =========================
 
@@ -12,30 +35,61 @@ if (button) {
 
     button.addEventListener("click", async () => {
 
-        const resultTitle = document.querySelector(".result-card h2");
-        const resultStatus = document.querySelector(".result-card p");
-        const confidence = document.querySelector(".result-card h3");
 
-        const scanTitle = document.querySelector(".scanner-card h2");
-        const scanText = document.querySelector(".scanner-card p");
+        const resultTitle =
+            document.querySelector(".result-card h2");
+
+        const resultStatus =
+            document.querySelector(".result-card p");
+
+        const confidence =
+            document.querySelector(".result-card h3");
+
+        const treatment =
+            document.getElementById("treatment");
+
+
+        const scanTitle =
+            document.querySelector(".scanner-card h2");
+
+        const scanText =
+            document.querySelector(".scanner-card p");
+
 
 
         if (!input.files.length) {
+
             alert("Please upload crop image first");
             return;
+
         }
 
 
+
         scanTitle.innerHTML = "🔍 AI Scanning...";
-        scanText.innerHTML = "Sending image to AI model...";
+        scanText.innerHTML = "Analyzing crop patterns...";
+
+
+        resultTitle.innerHTML =
+            "⏳ Processing image...";
+
+        confidence.innerHTML =
+            "Confidence: --";
+
 
 
         const formData = new FormData();
 
-        formData.append("file", input.files[0]);
+
+        formData.append(
+            "file",
+            input.files[0]
+        );
+
 
 
         try {
+
 
             const response = await fetch(
                 API_URL + "/predict",
@@ -46,40 +100,94 @@ if (button) {
             );
 
 
+
             const data = await response.json();
 
 
-            resultTitle.innerHTML = "🍂 " + data.disease;
+
+            resultTitle.innerHTML =
+                "🍂 " + data.disease;
+
+
 
             resultStatus.innerHTML =
                 "Disease Status: Detected";
+
 
 
             confidence.innerHTML =
                 "Confidence: " + data.confidence;
 
 
+
+            if (treatment) {
+
+                treatment.innerHTML =
+                    "💊 Treatment: " + data.treatment;
+
+            }
+
+
+
             scanTitle.innerHTML =
                 "✅ Scan Complete";
 
 
+
             scanText.innerHTML =
-                "AI analysis finished";
+                "AI analysis finished successfully";
 
 
         }
 
-        catch (error) {
+
+        catch(error) {
+
 
             console.log(error);
 
-            alert("AI server connection failed");
+
+
+            resultTitle.innerHTML =
+                "⚠️ AI Error";
+
+
+
+            resultStatus.innerHTML =
+                "Unable to connect with AI server";
+
+
+
+            confidence.innerHTML =
+                "Confidence: 0%";
+
+
+
+            if(treatment){
+
+                treatment.innerHTML =
+                    "Please try again.";
+
+            }
+
+
+
+            scanTitle.innerHTML =
+                "❌ Scan Failed";
+
+
+            scanText.innerHTML =
+                "Server connection error";
+
 
         }
+
 
     });
 
 }
+
+
 
 
 
@@ -91,6 +199,7 @@ async function loadWeatherDashboard() {
 
     try {
 
+
         const response = await fetch(
             API_URL + "/weather"
         );
@@ -100,7 +209,7 @@ async function loadWeatherDashboard() {
 
 
 
-        if (document.getElementById("temperature")) {
+        if(document.getElementById("temperature")){
 
             document.getElementById("temperature").innerHTML =
                 "☀️ " + data.temperature;
@@ -109,7 +218,7 @@ async function loadWeatherDashboard() {
 
 
 
-        if (document.getElementById("humidity")) {
+        if(document.getElementById("humidity")){
 
             document.getElementById("humidity").innerHTML =
                 "💧 " + data.humidity;
@@ -118,7 +227,7 @@ async function loadWeatherDashboard() {
 
 
 
-        if (document.getElementById("rain")) {
+        if(document.getElementById("rain")){
 
             document.getElementById("rain").innerHTML =
                 "🌧 " + data.rain_forecast;
@@ -128,9 +237,12 @@ async function loadWeatherDashboard() {
 
     }
 
-    catch (error) {
+    catch(error){
 
-        console.log("Weather error:", error);
+        console.log(
+            "Weather error:",
+            error
+        );
 
     }
 
@@ -142,13 +254,15 @@ loadWeatherDashboard();
 
 
 
+
 // =========================
 // Market Data
 // =========================
 
-async function loadMarketData() {
+async function loadMarketData(){
 
-    try {
+    try{
+
 
         const response = await fetch(
             API_URL + "/market"
@@ -159,7 +273,7 @@ async function loadMarketData() {
 
 
 
-        if (document.getElementById("marketCrop")) {
+        if(document.getElementById("marketCrop")){
 
 
             document.getElementById("marketCrop").innerHTML =
@@ -171,14 +285,18 @@ async function loadMarketData() {
                 "Price: " + data.price +
                 "<br>Trend: " + data.trend;
 
+
         }
 
 
     }
 
-    catch (error) {
+    catch(error){
 
-        console.log("Market error:", error);
+        console.log(
+            "Market error:",
+            error
+        );
 
     }
 
