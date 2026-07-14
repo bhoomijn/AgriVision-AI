@@ -1,61 +1,126 @@
-# 🌱 AgriVision-AI MVP
+# 🌱 AgriVision AI
 
-AI-powered crop monitoring MVP built for **Build in AI for India Hackathon 2026**.  
-Our mission: Empower farmers with accessible AI insights, early alerts, and a user-friendly dashboard.
+## 🚜 AI Powered Smart Agriculture Solution
 
----
-
-## 🚀 Key Highlights
-- 🌾 **Crop Health Monitoring** → Detects early crop issues using AI models
-- 🔔 **Real-time Alerts** → Notifies farmers about potential risks
-- 📊 **Interactive Dashboard** → Built with React + Tailwind
-- ⚡ **FastAPI Backend** → Lightweight and scalable API services
-- ☁️ **Cloud Deployment** → Vercel (frontend) + Render (backend)
+AgriVision AI is an intelligent agriculture platform that helps farmers monitor crop health, detect plant diseases, get weather insights and check market prices using Artificial Intelligence.
 
 ---
 
-## 🛠️ Tech Stack
-- **Frontend:** React, Tailwind CSS  
-- **Backend:** FastAPI (Python)  
-- **Deployment:** Vercel + Render  
-- **Version Control:** Git + GitHub  
+## 💡 Problem Statement
+
+Farmers often face difficulties in:
+- Early crop disease detection
+- Getting accurate farming suggestions
+- Monitoring weather conditions
+- Understanding market prices
+
+Late detection of diseases can reduce crop quality and yield.
+
+---
+
+## 🚀 Our Solution
+
+AgriVision AI provides:
+
+🤖 AI Crop Disease Detection  
+📷 Image-based crop analysis  
+🌦 Weather information  
+🌾 Market price insights  
+📊 Farmer dashboard for crop monitoring  
+
+---
+
+## ✨ Features
+
+### 🤖 AI Disease Detection
+- Upload crop image
+- AI analyzes plant health
+- Disease prediction
+- Confidence score
+- Suggested action
+
+### 📊 Farmer Dashboard
+- Crop health score
+- Recent scans
+- Soil moisture monitoring
+- Weather cards
+- Yield analytics
+
+### 🌦 Weather & Market
+- Temperature updates
+- Humidity information
+- Rain forecast
+- Crop market prices
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- HTML
+- CSS
+- JavaScript
+
+### Backend
+- FastAPI
+- Python
+
+### AI/ML
+- AI Model Integration
+- Image Processing
+
+### APIs
+- Weather API integration
+- Market Data API
 
 ---
 
 ## 📂 Project Structure
 
+AgriVision-AI
+│
+├── index.html
+├── ai.html
+├── dashboard.html
+│
+├── css
+│ └── style.css
+│
+├── js
+│ └── script.js
+│
+└── backend
+├── app.py
+├── ai_model.py
+├── requirements.txt
+└── model
 
 
 ---
 
-## ⚡ Getting Started
+## ⚙️ How to Run
 
-### 1️⃣ Clone the repo
-```bash
-git clone https://github.com/bhoomijn/AgriVision-AI-MVP.git
-cd AgriVision-AI-MVP
-```
+### Install dependencies
 
-2️⃣ Frontend setup
-
-cd frontend
-npm install
-npm start
-
-3️⃣ Backend setup
-
-cd backend
 pip install -r requirements.txt
-uvicorn main:app --reload
+
+
+### Start Backend
+
+uvicorn app:app --reload
+
+Backend runs on:
+
+http://127.0.0.1:8000
 
 ---
 
-## 🏆 Hackathon Context
-This project was developed for Build in AI for India Hackathon 2026.
-Our vision is to bridge technology and agriculture by providing farmers with AI-driven insights and accessible dashboards.
+## 👥 Team
+
+AgriVision AI Team
 
 ---
 
-## 📜 License
-MIT License © 2026 AgriVision-AI Team
+## 🌱 Vision
 
+To empower farmers with AI-driven technology for smarter, faster and more efficient agriculture.
