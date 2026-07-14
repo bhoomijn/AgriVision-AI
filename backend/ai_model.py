@@ -5,13 +5,13 @@ import io
 
 HF_TOKEN = os.getenv("HF_TOKEN")
 
-
 API_URL = "https://api-inference.huggingface.co/models/malifiahm/plant_disease_classification"
 
 
 def predict_disease(image):
 
     try:
+
         buffer = io.BytesIO()
         image.save(buffer, format="JPEG")
 
@@ -22,25 +22,32 @@ def predict_disease(image):
         response = requests.post(
             API_URL,
             headers=headers,
-            data=buffer.getvalue()
+            data=buffer.getvalue(),
+            timeout=60
         )
 
         result = response.json()
 
-        if isinstance(result, list):
+        print("HF RESPONSE:", result)
+
+        if isinstance(result, list) and len(result) > 0:
+
             prediction = result[0]
 
             return {
-                "disease": prediction["label"],
-                "confidence": str(round(prediction["score"] * 100, 2)) + "%",
+                "disease": prediction.get("label", "Unknown"),
+                "confidence": str(round(prediction.get("score", 0) * 100, 2)) + "%",
                 "treatment": "Use recommended crop protection methods."
             }
 
-        return {
-            "disease": "Model processing...",
-            "confidence": "0%",
-            "treatment": "Try again."
-        }
+        else:
+
+            return {
+                "disease": "Model Loading/Error",
+                "confidence": "0%",
+                "treatment": str(result)
+            }
+
 
     except Exception as e:
 
