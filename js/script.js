@@ -1,3 +1,5 @@
+const API_URL = "https://agrivision-ai-pbq6.onrender.com";
+
 const button = document.querySelector(".upload-box button");
 const input = document.getElementById("cropImage");
 
@@ -36,7 +38,7 @@ if (button) {
         try {
 
             const response = await fetch(
-                "http://127.0.0.1:8000/predict",
+                API_URL + "/predict",
                 {
                     method: "POST",
                     body: formData
@@ -52,11 +54,14 @@ if (button) {
             resultStatus.innerHTML =
                 "Disease Status: Detected";
 
+
             confidence.innerHTML =
                 "Confidence: " + data.confidence;
 
 
-            scanTitle.innerHTML = "✅ Scan Complete";
+            scanTitle.innerHTML =
+                "✅ Scan Complete";
+
 
             scanText.innerHTML =
                 "AI analysis finished";
@@ -67,14 +72,15 @@ if (button) {
         catch (error) {
 
             console.log(error);
-            alert("Backend connection failed");
+
+            alert("AI server connection failed");
 
         }
-
 
     });
 
 }
+
 
 
 // =========================
@@ -86,27 +92,37 @@ async function loadWeatherDashboard() {
     try {
 
         const response = await fetch(
-            "http://127.0.0.1:8000/weather"
+            API_URL + "/weather"
         );
+
 
         const data = await response.json();
 
 
+
         if (document.getElementById("temperature")) {
+
             document.getElementById("temperature").innerHTML =
                 "☀️ " + data.temperature;
+
         }
+
 
 
         if (document.getElementById("humidity")) {
+
             document.getElementById("humidity").innerHTML =
                 "💧 " + data.humidity;
+
         }
 
 
+
         if (document.getElementById("rain")) {
+
             document.getElementById("rain").innerHTML =
                 "🌧 " + data.rain_forecast;
+
         }
 
 
@@ -114,7 +130,7 @@ async function loadWeatherDashboard() {
 
     catch (error) {
 
-        console.log("Weather error", error);
+        console.log("Weather error:", error);
 
     }
 
@@ -122,6 +138,7 @@ async function loadWeatherDashboard() {
 
 
 loadWeatherDashboard();
+
 
 
 
@@ -134,16 +151,20 @@ async function loadMarketData() {
     try {
 
         const response = await fetch(
-            "http://127.0.0.1:8000/market"
+            API_URL + "/market"
         );
+
 
         const data = await response.json();
 
 
+
         if (document.getElementById("marketCrop")) {
+
 
             document.getElementById("marketCrop").innerHTML =
                 "🌾 " + data.crop;
+
 
 
             document.getElementById("marketPrice").innerHTML =
@@ -152,11 +173,12 @@ async function loadMarketData() {
 
         }
 
+
     }
 
     catch (error) {
 
-        console.log("Market error", error);
+        console.log("Market error:", error);
 
     }
 
