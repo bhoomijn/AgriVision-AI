@@ -13,7 +13,7 @@ def predict_disease(image):
     try:
 
         buffer = io.BytesIO()
-        image.save(buffer, format="JPEG")
+        image.convert("RGB").save(buffer, format="JPEG")
 
         headers = {
             "Authorization": f"Bearer {HF_TOKEN}"
