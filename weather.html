@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather & Market | AgriVision AI</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e8f5e9, #ffffff);
+            color: #222;
+        }
+
+
+        /* Navbar */
+
+        nav {
+            background: #1b5e20;
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 18px;
+        }
+
+
+        /* Heading */
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: #1b5e20;
+        }
+
+        .hero p {
+            margin-top: 10px;
+        }
+
+
+        /* Cards */
+
+        .container {
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 30px;
+
+        }
+
+
+        .card {
+
+            width: 280px;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: .3s;
+
+        }
+
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+
+        .card h2 {
+
+            color: #2e7d32;
+            margin-bottom: 15px;
+
+        }
+
+
+        .icon {
+
+            font-size: 50px;
+            margin-bottom: 15px;
+
+        }
+
+
+        .value {
+
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+
+
+        /* Market */
+
+        .market {
+
+            padding: 50px 8%;
+
+        }
+
+        .market h2 {
+
+            text-align: center;
+            color: #1b5e20;
+            margin-bottom: 30px;
+
+        }
+
+
+        .price-card {
+
+            background: white;
+            padding: 25px;
+            margin: 15px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
+
+        }
+
+
+        .price-card span {
+
+            float: right;
+            color: #2e7d32;
+            font-weight: bold;
+
+        }
+
+
+        footer {
+
+            background: #1b5e20;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+
+        }
+
+
+
+        @media(max-width:600px) {
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+        <a href="ai.html">AI Detection</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="features.html">Features</a>
+        <a href="weather.html">Weather</a>
+
+    </nav>
+
+
+
+    <section class="hero">
+
+        <h1>🌦 Weather & Market Insights</h1>
+
+        <p>Real-time farming intelligence for better decisions</p>
+
+    </section>
+
+
+
+    <section class="container">
+
+
+        <div class="card">
+
+            <div class="icon">☀️</div>
+
+            <h2>Temperature</h2>
+
+            <div class="value">28°C</div>
+
+            <p>Current farm temperature</p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="icon">💧</div>
+
+            <h2>Humidity</h2>
+
+            <div class="value">65%</div>
+
+            <p>Air moisture level</p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="icon">🌧️</div>
+
+            <h2>Rain Forecast</h2>
+
+            <div class="value">40%</div>
+
+            <p>Chance of rainfall</p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <section class="market">
+
+        <h2>🌾 Crop Market Prices</h2>
+
+
+        <div class="price-card">
+
+            Wheat
+
+            <span>₹2400 / Quintal</span>
+
+        </div>
+
+
+        <div class="price-card">
+
+            Rice
+
+            <span>₹3200 / Quintal</span>
+
+        </div>
+
+
+        <div class="price-card">
+
+            Soybean
+
+            <span>₹4500 / Quintal</span>
+
+        </div>
+
+
+    </section>
+
+
+
+    <footer>
+
+        © 2026 AgriVision AI | Smart Agriculture Solution
+
+    </footer>
+
+
+
+</body>
+
+</html>
