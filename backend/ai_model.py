@@ -1,57 +1,29 @@
-import os
-import requests
+from transformers import pipeline
 import io
 
-
-HF_TOKEN = os.getenv("HF_TOKEN")
-
-API_URL = "https://api-inference.huggingface.co/models/malifiahm/plant_disease_classification"
+# Load model once
+classifier = pipeline(
+    "image-classification",
+    model="malifiahm/plant_disease_classification"
+)
 
 
 def predict_disease(image):
 
     try:
+        image = image.convert("RGB")
 
-        buffer = io.BytesIO()
-        image.convert("RGB").save(buffer, format="JPEG")
+        result = classifier(image)
 
-        headers = {
-            "Authorization": f"Bearer {HF_TOKEN}"
+        prediction = result[0]
+
+        return {
+            "disease": prediction["label"],
+            "confidence": str(round(prediction["score"] * 100, 2)) + "%",
+            "treatment": "Use recommended crop protection methods."
         }
 
-        response = requests.post(
-            API_URL,
-            headers=headers,
-            data=buffer.getvalue(),
-            timeout=60
-        )
-
-        result = response.json()
-
-        print("HF RESPONSE:", result)
-
-        if isinstance(result, list) and len(result) > 0:
-
-            prediction = result[0]
-
-            return {
-                "disease": prediction.get("label", "Unknown"),
-                "confidence": str(round(prediction.get("score", 0) * 100, 2)) + "%",
-                "treatment": "Use recommended crop protection methods."
-            }
-
-        else:
-
-            return {
-                "disease": "Model Loading/Error",
-                "confidence": "0%",
-                "treatment": str(result)
-            }
-
-
     except Exception as e:
-
-        print("ERROR:", str(e))
 
         return {
             "disease": "AI Error",
