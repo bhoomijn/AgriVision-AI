@@ -1,29 +1,17 @@
-from transformers import pipeline
-
-
-# Load AI model once
-classifier = pipeline(
-    "image-classification",
-    model="malifiahm/plant_disease_classification"
-)
+# AgriVision AI Model Handler
 
 
 def predict_disease(image):
 
     try:
 
-       image = image.convert("RGB")
-
-result = classifier(image)
-
-print("AI RESULT:", result)
-
-prediction = result[0]
+        # AI model integration will be added with lightweight hosting
+        # Current version keeps backend stable on Render Free
 
         return {
-            "disease": prediction["label"],
-            "confidence": str(round(prediction["score"] * 100, 2)) + "%",
-            "treatment": "Use suitable crop protection methods and maintain proper irrigation."
+            "disease": "AI Model Loading Issue",
+            "confidence": "0%",
+            "treatment": "AI model is being optimized for deployment."
         }
 
 
