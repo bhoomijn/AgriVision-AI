@@ -4,3 +4,7 @@ python-multipart
 pillow
 numpy
 requests
+torch
+torchvision
+transformers
+safetensors
