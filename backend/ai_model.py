@@ -51,10 +51,10 @@ def predict_disease(image):
 
     except Exception as e:
 
-    print("ERROR:", str(e))
+        print("ERROR:", str(e))
 
-    return {
-        "disease": "AI Error",
-        "confidence": "0%",
-        "treatment": str(e)
-    }
+        return {
+            "disease": "AI Error",
+            "confidence": "0%",
+            "treatment": str(e)
+        }
