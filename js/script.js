@@ -1,207 +1,54 @@
-const API_URL = "https://agrivision-ai-pbq6.onrender.com";
+const cropImage = document.getElementById("cropImage");
+const previewImage = document.getElementById("previewImage");
+const scanBtn = document.getElementById("scanBtn");
 
-const button = document.querySelector(".upload-box button");
-const input = document.getElementById("cropImage");
+const result = document.getElementById("result");
+const treatment = document.getElementById("treatment");
 
 
-// =========================
-// Image Preview
-// =========================
+// Image preview
+cropImage.addEventListener("change", function () {
 
-if (input) {
+    const file = this.files[0];
 
-    input.addEventListener("change", () => {
+    if (file) {
+        previewImage.src = URL.createObjectURL(file);
+        previewImage.style.display = "block";
+    }
 
-        const preview = document.getElementById("previewImage");
+});
 
-        if (input.files.length && preview) {
 
-            preview.src = URL.createObjectURL(input.files[0]);
-            preview.style.display = "block";
+// Scan button
+scanBtn.addEventListener("click", async function () {
 
-        }
+    const file = cropImage.files[0];
 
-    });
+    if (!file) {
+        alert("Please upload a crop image first");
+        return;
+    }
 
-}
 
+    result.innerHTML = `
+        <h2>🔍 AI is scanning...</h2>
+        <p>Please wait while analyzing crop health</p>
+    `;
 
 
-// =========================
-// AI Disease Detection
-// =========================
+    const formData = new FormData();
 
-if (button) {
+    formData.append("file", file);
 
-    button.addEventListener("click", async () => {
-
-
-        const resultTitle =
-            document.querySelector(".result-card h2");
-
-        const resultStatus =
-            document.querySelector(".result-card p");
-
-        const confidence =
-            document.querySelector(".result-card h3");
-
-        const treatment =
-            document.getElementById("treatment");
-
-
-        const scanTitle =
-            document.querySelector(".scanner-card h2");
-
-        const scanText =
-            document.querySelector(".scanner-card p");
-
-
-
-        if (!input.files.length) {
-
-            alert("Please upload crop image first");
-            return;
-
-        }
-
-
-
-        scanTitle.innerHTML = "🔍 AI Scanning...";
-        scanText.innerHTML = "Analyzing crop patterns...";
-
-
-        resultTitle.innerHTML =
-            "⏳ Processing image...";
-
-        confidence.innerHTML =
-            "Confidence: --";
-
-
-
-        const formData = new FormData();
-
-
-        formData.append(
-            "file",
-            input.files[0]
-        );
-
-
-
-        try {
-
-
-            const response = await fetch(
-                API_URL + "/predict",
-                {
-                    method: "POST",
-                    body: formData
-                }
-            );
-
-
-
-            const data = await response.json();
-
-
-
-            resultTitle.innerHTML =
-                "🍂 " + data.disease;
-
-
-
-            resultStatus.innerHTML =
-                "Disease Status: Detected";
-
-
-
-            confidence.innerHTML =
-                "Confidence: " + data.confidence;
-
-
-
-            if (treatment) {
-
-                treatment.innerHTML =
-                    "💊 Treatment: " + data.treatment;
-
-            }
-
-
-
-            scanTitle.innerHTML =
-                "✅ Scan Complete";
-
-
-
-            scanText.innerHTML =
-                "AI analysis finished successfully";
-
-
-        }
-
-
-        catch(error) {
-
-
-            console.log(error);
-
-
-
-            resultTitle.innerHTML =
-                "⚠️ AI Error";
-
-
-
-            resultStatus.innerHTML =
-                "Unable to connect with AI server";
-
-
-
-            confidence.innerHTML =
-                "Confidence: 0%";
-
-
-
-            if(treatment){
-
-                treatment.innerHTML =
-                    "Please try again.";
-
-            }
-
-
-
-            scanTitle.innerHTML =
-                "❌ Scan Failed";
-
-
-            scanText.innerHTML =
-                "Server connection error";
-
-
-        }
-
-
-    });
-
-}
-
-
-
-
-
-// =========================
-// Weather Data
-// =========================
-
-async function loadWeatherDashboard() {
 
     try {
 
-
         const response = await fetch(
-            API_URL + "/weather"
+            "http://127.0.0.1:8000/predict",
+            {
+                method: "POST",
+                body: formData
+            }
         );
 
 
@@ -209,98 +56,32 @@ async function loadWeatherDashboard() {
 
 
 
-        if(document.getElementById("temperature")){
+        result.innerHTML = `
+            <h2>🌱 ${data.disease}</h2>
 
-            document.getElementById("temperature").innerHTML =
-                "☀️ " + data.temperature;
+            <p>
+                Disease detected successfully
+            </p>
 
-        }
+            <h3>
+                Confidence: ${data.confidence}%
+            </h3>
 
-
-
-        if(document.getElementById("humidity")){
-
-            document.getElementById("humidity").innerHTML =
-                "💧 " + data.humidity;
-
-        }
-
-
-
-        if(document.getElementById("rain")){
-
-            document.getElementById("rain").innerHTML =
-                "🌧 " + data.rain_forecast;
-
-        }
+            <p>
+                ${data.treatment}
+            </p>
+        `;
 
 
-    }
+    } catch (error) {
 
-    catch(error){
+        result.innerHTML = `
+            <h2>❌ Error</h2>
+            <p>Backend connection failed</p>
+        `;
 
-        console.log(
-            "Weather error:",
-            error
-        );
+        console.log(error);
 
     }
 
-}
-
-
-loadWeatherDashboard();
-
-
-
-
-
-// =========================
-// Market Data
-// =========================
-
-async function loadMarketData(){
-
-    try{
-
-
-        const response = await fetch(
-            API_URL + "/market"
-        );
-
-
-        const data = await response.json();
-
-
-
-        if(document.getElementById("marketCrop")){
-
-
-            document.getElementById("marketCrop").innerHTML =
-                "🌾 " + data.crop;
-
-
-
-            document.getElementById("marketPrice").innerHTML =
-                "Price: " + data.price +
-                "<br>Trend: " + data.trend;
-
-
-        }
-
-
-    }
-
-    catch(error){
-
-        console.log(
-            "Market error:",
-            error
-        );
-
-    }
-
-}
-
-
-loadMarketData();
+});
