@@ -1,24 +1,26 @@
-# AgriVision AI Model Handler
+from transformers import ViTImageProcessor, ViTForImageClassification
+from PIL import Image
+import torch
 
+MODEL_PATH = "./crop_model"
 
-def predict_disease(image):
+processor = ViTImageProcessor.from_pretrained(MODEL_PATH)
+model = ViTForImageClassification.from_pretrained(MODEL_PATH)
 
-    try:
+def predict_image(image_path):
+    image = Image.open(image_path).convert("RGB")
 
-        # AI model integration will be added with lightweight hosting
-        # Current version keeps backend stable on Render Free
+    inputs = processor(images=image, return_tensors="pt")
 
-        return {
-            "disease": "AI Model Loading Issue",
-            "confidence": "0%",
-            "treatment": "AI model is being optimized for deployment."
-        }
+    with torch.no_grad():
+        outputs = model(**inputs)
 
+    prediction = torch.argmax(outputs.logits, dim=1).item()
 
-    except Exception as e:
+    label = model.config.id2label[prediction]
+    confidence = torch.softmax(outputs.logits, dim=1)[0][prediction].item()
 
-        return {
-            "disease": "AI Error",
-            "confidence": "0%",
-            "treatment": str(e)
-        }
+    return {
+        "disease": label,
+        "confidence": round(confidence * 100, 2)
+    }
