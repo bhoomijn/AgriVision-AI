@@ -4,8 +4,10 @@ const scanBtn = document.getElementById("scanBtn");
 
 const result = document.getElementById("result");
 
+const BACKEND_URL = "https://agrivision-ai-1-y1dg.onrender.com";
 
-// ================= AI IMAGE PREVIEW =================
+
+// ================= IMAGE PREVIEW =================
 
 if (cropImage) {
 
@@ -44,12 +46,10 @@ if (scanBtn) {
         }
 
 
-
         result.innerHTML = `
             <h2>🔍 AI is scanning...</h2>
-            <p>Please wait while analyzing crop health</p>
+            <p>Analyzing crop health...</p>
         `;
-
 
 
         const formData = new FormData();
@@ -62,13 +62,17 @@ if (scanBtn) {
 
 
             const response = await fetch(
-                "https://agrivision-ai-1-y1dg.onrender.com/predict",
+                `${BACKEND_URL}/predict`,
                 {
-                    method:"POST",
-                    body:formData
+                    method: "POST",
+                    body: formData
                 }
             );
 
+
+            if (!response.ok) {
+                throw new Error("Prediction failed");
+            }
 
 
             const data = await response.json();
@@ -83,11 +87,9 @@ if (scanBtn) {
                 Disease detected successfully
                 </p>
 
-
                 <h3>
                 Confidence: ${data.confidence}%
                 </h3>
-
 
                 <p>
                 Treatment: ${data.treatment}
@@ -96,21 +98,24 @@ if (scanBtn) {
             `;
 
 
-
         }
-        catch(error){
+
+
+        catch(error) {
 
 
             result.innerHTML = `
 
                 <h2>❌ Error</h2>
-                <p>Backend connection failed</p>
+
+                <p>
+                Backend connection failed
+                </p>
 
             `;
 
 
             console.log(error);
-
 
         }
 
@@ -121,107 +126,42 @@ if (scanBtn) {
 
 
 
+// ================= DASHBOARD PLACEHOLDER =================
 
-// ================= DASHBOARD WEATHER =================
+function loadWeather(){
 
+    if(document.getElementById("temperature")){
 
-async function loadWeather(){
+        document.getElementById("temperature").innerHTML =
+        "☀️ 28°C";
 
+        document.getElementById("humidity").innerHTML =
+        "💧 65%";
 
-    try{
-
-
-        const response = await fetch(
-            "http://127.0.0.1:8000/weather"
-        );
-
-
-        const data = await response.json();
-
-
-
-        if(document.getElementById("temperature")){
-
-
-            document.getElementById("temperature").innerHTML =
-            "☀️ " + data.temperature;
-
-
-            document.getElementById("humidity").innerHTML =
-            "💧 " + data.humidity;
-
-
-            document.getElementById("rain").innerHTML =
-            "🌧 " + data.rain_forecast;
-
-
-        }
-
-
+        document.getElementById("rain").innerHTML =
+        "🌧 20%";
 
     }
-    catch(error){
-
-        console.log("Weather API Error",error);
-
-    }
-
 
 }
 
 
 
+function loadMarket(){
 
+    if(document.getElementById("marketCrop")){
 
-// ================= MARKET DATA =================
+        document.getElementById("marketCrop").innerHTML =
+        "🌾 Wheat";
 
-
-async function loadMarket(){
-
-
-    try{
-
-
-        const response = await fetch(
-            "http://127.0.0.1:8000/market"
-        );
-
-
-        const data = await response.json();
-
-
-
-        if(document.getElementById("marketCrop")){
-
-
-            document.getElementById("marketCrop").innerHTML =
-            "🌾 " + data.crop;
-
-
-            document.getElementById("marketPrice").innerHTML =
-            "₹ " + data.price + " / quintal";
-
-
-        }
-
-
+        document.getElementById("marketPrice").innerHTML =
+        "₹2500 / quintal";
 
     }
-    catch(error){
-
-        console.log("Market API Error",error);
-
-    }
-
 
 }
 
 
-
-
-
-// Run Dashboard APIs
 
 loadWeather();
-
 loadMarket();
