@@ -21,9 +21,10 @@ def predict_image(image_path):
     confidence = torch.softmax(outputs.logits, dim=1)[0][prediction].item()
 
     return {
-        "disease": label,
-        "confidence": round(confidence * 100, 2)
-    }
+    "disease": label,
+    "confidence": round(confidence * 100, 2),
+    "treatment": treatments.get(label, "Consult agriculture expert.")
+}
 
 treatments = {
     "Wheat___Brown_Rust": "Use recommended fungicide spray and remove infected leaves.",
