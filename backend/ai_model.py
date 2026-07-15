@@ -42,3 +42,4 @@ treatments = {
     "Rice___Leaf_Blast": "Use recommended fungicide and maintain field conditions.",
     "Rice___Healthy": "Crop is healthy. Continue monitoring."
 }
+print(model.config.id2label)
