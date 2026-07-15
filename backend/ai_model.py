@@ -4,10 +4,7 @@ import torch
 
 import os
 
-MODEL_PATH = os.path.join(
-    os.path.dirname(__file__),
-    "crop_model"
-)
+MODEL_PATH = "wambugu71/crop_leaf_diseases_vit"
 
 processor = ViTImageProcessor.from_pretrained(MODEL_PATH)
 model = ViTForImageClassification.from_pretrained(MODEL_PATH)
