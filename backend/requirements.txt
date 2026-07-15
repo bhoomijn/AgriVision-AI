@@ -1,9 +1,9 @@
 fastapi
 uvicorn
 python-multipart
+transformers
+torch
+safetensors
 pillow
 numpy
 requests
-tensorflow
-opencv-python
-scikit-learn
