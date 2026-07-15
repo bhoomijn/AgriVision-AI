@@ -171,7 +171,7 @@ http://127.0.0.1:8000
 
 Open the frontend files in browser to use the application.
 
-🌍 Impact For India
+## 🌍 Impact For India
 
 AgriVision AI focuses on solving a real agricultural challenge by:
 
@@ -180,7 +180,7 @@ AgriVision AI focuses on solving a real agricultural challenge by:
 ✅ Supporting informed decisions
 ✅ Making AI accessible in agriculture
 
-🚀 Future Vision
+## 🚀 Future Vision
 
 Future enhancements:
 
@@ -191,12 +191,12 @@ Future enhancements:
 📊 Crop yield forecasting
 👨‍🌾 Expert farmer support system
 
-🏆 Built For
+## 🏆 Built For
 
 AI Innovation Hackathon 🇮🇳
 
 Build. Ship. Solve for India.
 
-👥 Team AgriVision AI
+## 👥 Team AgriVision AI
 
 Creating smarter agriculture through Artificial Intelligence 🌱🤖
