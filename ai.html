@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -42,30 +43,43 @@
             <div class="ai-content">
 
 
+                <span class="badge">🤖 AI Powered Agriculture</span>
+
+
                 <h1>
-                    🤖 AI Crop Disease Detection
+                    Smart Crop Disease Detection
                 </h1>
 
 
                 <p>
-                    Upload your crop image and let AI analyze plant health,
-                    detect diseases and suggest treatments.
+                    Upload your crop leaf image and our AI model will analyze plant health,
+                    identify diseases and provide treatment recommendations.
                 </p>
 
 
 
                 <div class="upload-box">
 
-    <input type="file" id="cropImage" accept="image/*">
 
-    <img id="previewImage" 
-         style="display:none; width:250px; border-radius:15px; margin-top:15px;">
+                    <h3>
+                        📷 Upload Crop Image
+                    </h3>
 
-    <button id="scanBtn">
-        Scan Crop
-    </button>
 
-</div>
+                    <input type="file" id="cropImage" accept="image/*">
+
+
+                    <img id="previewImage" style="display:none; width:260px; border-radius:20px; margin-top:20px;">
+
+
+
+                    <button id="scanBtn">
+                        🔍 Analyze Crop
+                    </button>
+
+
+                </div>
+
 
             </div>
 
@@ -78,24 +92,33 @@
 
                 <div class="scan-circle">
 
-                    🌿
+                    🌱
 
                 </div>
 
 
                 <h2>
-                    AI Scanning...
+                    AI Analysis
                 </h2>
 
 
                 <p>
-                    Analyzing crop patterns
+                    Scanning crop patterns...
                 </p>
 
 
                 <div class="progress">
 
                     <div></div>
+
+                </div>
+
+
+                <div class="scan-info">
+
+                    <span>🧠 Vision Transformer Model</span>
+
+                    <span>⚡ Fast Prediction</span>
 
                 </div>
 
@@ -117,29 +140,36 @@
 
 
         <h1>
-            Disease Prediction Result
+            🌿 Disease Prediction Result
         </h1>
+
 
 
         <div class="result-card" id="result">
 
-    <h2>
-        🍃 Upload image to get prediction
-    </h2>
 
-    <p>
-        Disease result will appear here
-    </p>
+            <h2>
+                Upload an image to start AI analysis
+            </h2>
 
-    <h3>
-        Confidence: --
-    </h3>
 
-    <p id="treatment">
-        Treatment recommendation will appear here
-    </p>
+            <p>
+                Your crop health report will appear here.
+            </p>
 
-</div>
+
+            <h3>
+                Confidence: --
+            </h3>
+
+
+            <p id="treatment">
+                Treatment recommendation will appear here.
+            </p>
+
+
+        </div>
+
 
     </section>
 
@@ -155,7 +185,9 @@
     </footer>
 
 
+
     <script src="js/script.js"></script>
+
 
 </body>
 
