@@ -9,7 +9,6 @@ from ai_model import predict_image
 app = FastAPI()
 
 
-# CORS for frontend connection
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -26,7 +25,6 @@ def home():
     }
 
 
-
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
 
@@ -36,12 +34,9 @@ async def predict(file: UploadFile = File(...)):
         io.BytesIO(image_bytes)
     ).convert("RGB")
 
-
     result = predict_image(image)
 
-
     print("MODEL RESULT:", result)
-
 
     return {
         "disease": result["disease"],
