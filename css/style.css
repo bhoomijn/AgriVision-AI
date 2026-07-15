@@ -1158,3 +1158,79 @@ footer {
     opacity: 0.9;
 
 }
+
+/* ================= FARMER PROFILE ================= */
+
+.farmer-section {
+
+    margin-top: 50px;
+    padding: 20px;
+
+}
+
+
+.farmer-section h2 {
+
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+
+}
+
+
+
+.farmer-card {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 30px;
+
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+}
+
+
+
+.farmer-card h3 {
+
+    font-size: 24px;
+    margin-bottom: 15px;
+
+}
+
+
+
+.farmer-card p {
+
+    font-size: 17px;
+    margin: 10px 0;
+
+}
+
+
+
+.field-status {
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.08);
+
+    transition: 0.3s;
+
+}
+
+
+
+.field-status:hover {
+
+    transform: translateY(-8px);
+
+}
