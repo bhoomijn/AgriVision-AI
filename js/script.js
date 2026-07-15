@@ -62,7 +62,7 @@ if (scanBtn) {
 
 
             const response = await fetch(
-                "https://YOUR-RENDER-URL/predict",
+                "https://agrivision-ai-1-y1dg.onrender.com/predict",
                 {
                     method:"POST",
                     body:formData
