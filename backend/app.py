@@ -36,11 +36,12 @@ async def predict(file: UploadFile = File(...)):
     ).convert("RGB")
 
 
-    result = predict_image(image)
+   result = predict_image(image)
 
+print("MODEL RESULT:", result)
 
-    return {
-        "disease": result["disease"],
-        "confidence": result["confidence"],
-        "treatment": result["treatment"]
-    }
+return {
+    "disease": result["disease"],
+    "confidence": result["confidence"],
+    "treatment": result["treatment"]
+}
