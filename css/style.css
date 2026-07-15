@@ -1091,3 +1091,70 @@ footer {
     margin-top: 40px;
 
 }
+
+/* ================= SMART FARMING ALERTS ================= */
+
+.alerts-section {
+
+    margin-top: 50px;
+    padding: 20px;
+
+}
+
+
+.alerts-section h2 {
+
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+
+}
+
+
+
+.alerts-container {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+
+}
+
+
+
+.alert-card {
+
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: 0.3s;
+
+}
+
+
+
+.alert-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+
+
+.alert-card h3 {
+
+    margin-bottom: 15px;
+    font-size: 22px;
+
+}
+
+
+
+.alert-card p {
+
+    line-height: 1.6;
+    opacity: 0.9;
+
+}
