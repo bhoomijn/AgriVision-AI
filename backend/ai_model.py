@@ -2,7 +2,12 @@ from transformers import ViTImageProcessor, ViTForImageClassification
 from PIL import Image
 import torch
 
-MODEL_PATH = "./crop_model"
+import os
+
+MODEL_PATH = os.path.join(
+    os.path.dirname(__file__),
+    "crop_model"
+)
 
 processor = ViTImageProcessor.from_pretrained(MODEL_PATH)
 model = ViTForImageClassification.from_pretrained(MODEL_PATH)
