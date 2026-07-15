@@ -8,7 +8,7 @@ processor = ViTImageProcessor.from_pretrained(MODEL_PATH)
 model = ViTForImageClassification.from_pretrained(MODEL_PATH)
 
 def predict_image(image_path):
-    image = Image.open(image_path).convert("RGB")
+    image = image_path.convert("RGB")
 
     inputs = processor(images=image, return_tensors="pt")
 
