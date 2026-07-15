@@ -1,210 +1,179 @@
 # 🌱 AgriVision AI
-### Empowering Farmers with Artificial Intelligence
 
-AgriVision AI is an AI-powered smart agriculture solution designed to help farmers identify crop diseases at an early stage using computer vision. By analyzing crop leaf images, our system detects diseases, provides confidence scores, and recommends possible treatments.
+## AI-Powered Crop Disease Detection System
 
----
+![AgriVision AI](https://img.shields.io/badge/AI-Agriculture-green)
+![FastAPI](https://img.shields.io/badge/Backend-FastAPI-blue)
+![HuggingFace](https://img.shields.io/badge/Model-Vision%20Transformer-orange)
 
-## 🚜 The Problem
+## 🚀 Overview
 
-Agriculture is the backbone of India, but crop diseases remain one of the major reasons behind productivity loss.
+AgriVision AI is an intelligent agriculture solution that helps farmers identify crop diseases quickly using Artificial Intelligence.
 
-Farmers often face challenges:
-- ❌ Late disease identification
-- ❌ Lack of quick access to agricultural experts
-- ❌ Unnecessary pesticide usage
-- ❌ Crop damage due to delayed action
-
----
-
-## 💡 Our Solution
-
-AgriVision AI provides a simple AI-based disease detection platform:
-
-📸 Upload a crop leaf image  
-⬇️  
-🤖 AI analyzes the image  
-⬇️  
-🌿 Disease is identified  
-⬇️  
-💊 Treatment guidance is provided  
-
-Our goal is to make AI accessible for farmers and support faster agricultural decisions.
+By analyzing crop leaf images, the system detects possible diseases, provides confidence scores, and suggests suitable treatment recommendations. The goal is to support early disease detection, reduce crop losses, and enable smarter farming decisions.
 
 ---
 
 # ✨ Key Features
 
-🌿 **AI Crop Disease Detection**
-- Detects diseases from leaf images using Deep Learning
+## 🤖 AI Crop Disease Detection
 
-📊 **Confidence Analysis**
-- Provides prediction confidence score
+* Upload a crop leaf image
+* AI analyzes plant health using a Vision Transformer model
+* Provides disease prediction with confidence score
 
-💊 **Treatment Recommendation**
-- Suggests possible crop care actions
+## 🌿 Smart Treatment Recommendations
 
-🖥️ **Farmer-Friendly Interface**
-- Simple and easy-to-use web platform
+* Gives actionable suggestions after disease identification
+* Helps farmers take early preventive measures
 
-📈 **Smart Agriculture Dashboard**
-- Designed for future integration of weather, soil and market insights
+## 📊 Farmer Dashboard
+
+* Crop health monitoring interface
+* Weather and agriculture insights
+* User-friendly visualization
+
+## ⚡ Fast & Accessible
+
+* Web-based solution
+* Responsive interface
+* AI-powered results within seconds
 
 ---
 
-# 🤖 Artificial Intelligence Model
+# 🧠 Artificial Intelligence Model
 
-### Vision Transformer (ViT)
+AgriVision AI uses a Vision Transformer (ViT) image classification model.
 
-AgriVision AI uses a fine-tuned Vision Transformer model for image classification.
+### Model Details
 
-### Model Information
-
-- Architecture: ViT-Tiny Patch16-224
-- Framework: Hugging Face Transformers
-- Deep Learning Framework: PyTorch
-- Input: Crop Leaf Image
-- Output:
-  - Disease Name
-  - Confidence Score
+* **Model:** `wambugu71/crop_leaf_diseases_vit`
+* **Architecture:** Vision Transformer (ViT)
+* **Framework:** Hugging Face Transformers + PyTorch
+* **Task:** Crop Leaf Disease Classification
 
 ### Supported Crops
 
-🌽 Corn  
-🥔 Potato  
-🌾 Rice  
-🌱 Wheat  
+* 🌾 Wheat
+* 🌽 Corn
+* 🥔 Potato
+* 🍚 Rice
 
-### Supported Conditions
-
-- Healthy crops
-- Rust diseases
-- Leaf spot diseases
-- Blight diseases
+The model can identify multiple healthy and diseased crop categories.
 
 ---
 
-# 🏗️ How AgriVision AI Works
+# ⚙️ How It Works
 
-         Crop Leaf Image
-                |
-                ↓
-        Web Upload Interface
-                |
-                ↓
-         FastAPI Backend
-                |
-                ↓
-    Vision Transformer Model
-                |
-                ↓
-      Disease Classification
-                |
-                ↓
-   Treatment Recommendation
+```
+User Uploads Crop Image
+          ↓
+Frontend Sends Image
+          ↓
+FastAPI Backend Processing
+          ↓
+Vision Transformer AI Model
+          ↓
+Disease Prediction + Confidence
+          ↓
+Treatment Recommendation
+```
 
-   
 ---
 
-# 🛠️ Technology Stack
+# 🛠 Tech Stack
 
 ## Frontend
-- HTML5
-- CSS3
-- JavaScript
+
+* HTML5
+* CSS3
+* JavaScript
 
 ## Backend
-- Python
-- FastAPI
-- Uvicorn
 
-## AI / ML
-- Vision Transformer (ViT)
-- PyTorch
-- Hugging Face Transformers
+* Python
+* FastAPI
+* Uvicorn
 
-## Development Tools
-- Visual Studio Code
-- GitHub
-- Hugging Face Hub
+## Machine Learning
+
+* PyTorch
+* Hugging Face Transformers
+* Vision Transformer (ViT)
+
+## Deployment
+
+Frontend:
+
+* Netlify
+
+Backend:
+
+* Render
 
 ---
 
 # 📂 Project Structure
 
+```
 AgriVision-AI
 │
-├── frontend
-│ ├── index.html
-│ ├── ai.html
-│ ├── dashboard.html
-│ ├── css
-│ └── js
-│
 ├── backend
-│ ├── app.py
-│ ├── ai_model.py
-│ ├── requirements.txt
-│ └── crop_model
+│   ├── app.py
+│   ├── ai_model.py
+│   └── requirements.txt
 │
+├── css
+│   └── style.css
+│
+├── js
+│   └── script.js
+│
+├── index.html
+├── ai.html
+├── dashboard.html
 └── README.md
-
-
----
-
-# ⚙️ Running The Project
-
-## Backend Setup
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
 ```
-Start FastAPI server
-
-uvicorn app:app --reload
-
-Server:
-
-http://127.0.0.1:8000
-
-Open the frontend files in browser to use the application.
 
 ---
 
-## 🌍 Impact For India
+# 🌐 Live Demo
 
-AgriVision AI focuses on solving a real agricultural challenge by:
+Website:
+https://agrivision-ai4.netlify.app
 
-✅ Helping farmers identify diseases faster
-✅ Reducing crop loss
-✅ Supporting informed decisions
-✅ Making AI accessible in agriculture
-
----
-
-## 🚀 Future Vision
-
-Future enhancements:
-
-🗣️ Regional language AI voice assistant
-📱 Mobile application
-🌦️ Weather-based disease prediction
-🌱 Soil monitoring using IoT
-📊 Crop yield forecasting
-👨‍🌾 Expert farmer support system
+Backend API:
+https://agrivision-ai-1-y1dg.onrender.com
 
 ---
 
-## 🏆 Built For
+# 🎯 Problem We Solve
 
-AI Innovation Hackathon 🇮🇳
+Farmers often face crop losses because diseases are detected late. Manual identification requires expert knowledge and can be time-consuming.
 
-Build. Ship. Solve for India.
+AgriVision AI provides a faster AI-based approach for early crop disease detection and better farming decisions.
 
 ---
 
-## 👥 Team AgriVision AI
+# 🔮 Future Enhancements
 
-Creating smarter agriculture through Artificial Intelligence 🌱🤖
+* 📱 Mobile application for farmers
+* 🌍 Multi-language support
+* 🌦 Weather-based disease alerts
+* 📈 Crop yield prediction
+* 🛰 Satellite-based crop monitoring
+* More crop disease categories
+
+---
+
+# 👥 Team
+
+**AgriVision AI Team**
+
+Built with 🌱 and 🤖 to empower smart agriculture.
+
+---
+
+## ⭐ Conclusion
+
+AgriVision AI combines Artificial Intelligence and agriculture to create a practical solution for modern farming challenges, helping farmers detect crop diseases earlier and make informed decisions.
