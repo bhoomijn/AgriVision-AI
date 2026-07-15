@@ -17,7 +17,7 @@ def predict_image(image_path):
 
     with torch.no_grad():
         outputs = model(**inputs)
-
+    print("LABELS:", model.config.id2label)
     prediction = torch.argmax(outputs.logits, dim=1).item()
 
     label = model.config.id2label[prediction]
