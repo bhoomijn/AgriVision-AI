@@ -8,6 +8,7 @@ MODEL_PATH = "wambugu71/crop_leaf_diseases_vit"
 
 processor = ViTImageProcessor.from_pretrained(MODEL_PATH)
 model = ViTForImageClassification.from_pretrained(MODEL_PATH)
+print("LABELS:", model.config.id2label)
 
 def predict_image(image_path):
     image = image_path.convert("RGB")
