@@ -1,7 +1,7 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
-from ai_model import predict_disease
+from ai_model import predict_image
 import io
 
 
@@ -31,7 +31,7 @@ async def predict_crop(file: UploadFile = File(...)):
 
     image = Image.open(io.BytesIO(image_bytes))
 
-    result = predict_disease(image)
+    result = predict_image(image)
 
     return result
 
