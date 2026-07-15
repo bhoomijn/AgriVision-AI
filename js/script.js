@@ -63,3 +63,21 @@ scanBtn.addEventListener("click", async () => {
     }
 
 });
+
+// tumhara existing AI detection code
+...
+...
+
+// Dashboard Weather API
+async function loadWeather(){
+    ...
+}
+
+
+// Market API
+async function loadMarket(){
+    ...
+}
+
+loadWeather();
+loadMarket();
