@@ -1409,3 +1409,41 @@ footer {
     background: rgba(46, 204, 113, .08);
     border-left: 4px solid #2ecc71;
 }
+
+/* AI Premium Result */
+
+.confidence-box {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(46,204,113,0.12);
+}
+
+
+.confidence-box span {
+    font-size: 14px;
+    opacity: .8;
+}
+
+
+.confidence-box h3 {
+    font-size: 35px;
+    color: #2ecc71;
+    margin-top: 8px;
+}
+
+
+
+.treatment-box {
+
+    margin-top: 20px;
+    padding: 20px;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.08);
+
+    border-left: 4px solid #2ecc71;
+
+    line-height: 1.6;
+}
