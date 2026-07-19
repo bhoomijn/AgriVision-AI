@@ -6,6 +6,9 @@
 ![FastAPI](https://img.shields.io/badge/Backend-FastAPI-blue)
 ![HuggingFace](https://img.shields.io/badge/Model-Vision%20Transformer-orange)
 
+Updated 
+Live demo : ![AgriVision AI] (https://agri-vision-1--vanshmanitiwari.replit.app/) 
+
 ---
 
 # 🚀 Overview
