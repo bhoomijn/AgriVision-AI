@@ -165,6 +165,11 @@ Treatment Recommendation
 - Pillow
 - Torchvision
 
+  ## Development & Deployment
+
+- GitHub
+- Replit
+
 ---
 
 # 🏗 System Architecture
@@ -240,7 +245,7 @@ AgriVision AI aims to create meaningful impact by:
 
 ---
 
-# 🔮 Future Enhancements
+# 🔮 Future Roadmap
 
 Future improvements include:
 
@@ -267,11 +272,15 @@ Future possibilities include integration with:
 
 ---
 
-# 👥 Team
+# 👥 Contributors
 
-## AI4India Innovators
+| Name | GitHub |
+|------|--------|
+| Bhoomi Jain | @bhoomijn |
+| Sansu Kumar | @sansukumar57-dev |
+| Vansh Mani Tiwari | @1vansh-5 |
 
-Building AI solutions for real-world Indian problems.
+**Team:** AI4India Innovators
 
 ---
 
