@@ -278,7 +278,7 @@ Future possibilities include integration with:
 |------|--------|
 | Bhoomi Jain | https://github.com/bhoomijn |
 | Sansu Kumar | https://github.com/sansukumar57-dev |
-| Vansh Mani Tiwari | @1vansh-5 |
+| Vansh Mani Tiwari | https://github.com/1vansh-5 |
 
 **Team:** AI4India Innovators
 
