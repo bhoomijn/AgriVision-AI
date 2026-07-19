@@ -149,18 +149,6 @@ AgriVision-AI
 
 ---
 
-# 🌐 Live Demo
-
-## Web Application
-
-https://agrivision-ai4.netlify.app
-
-## Backend API
-
-https://agrivision-ai-1-y1dg.onrender.com
-
----
-
 # 🎯 Problem We Solve
 
 Farmers often face crop losses because diseases are detected late.
