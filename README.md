@@ -7,8 +7,8 @@
 ![HuggingFace](https://img.shields.io/badge/Model-Vision%20Transformer-orange)
 
 Updated 
-Live demo : ![AgriVision AI] (https://agri-vision-1--vanshmanitiwari.replit.app/) 
-Live Video : (https://drive.google.com/file/d/1dgNmYjxSnha0Zo76NaNwkoqqPVAW6U6e/view?usp=sharing)
+## Live demo : ![AgriVision AI] (https://agri-vision-1--vanshmanitiwari.replit.app/) 
+## Live Video : (https://drive.google.com/file/d/1dgNmYjxSnha0Zo76NaNwkoqqPVAW6U6e/view?usp=sharing)
 ---
 
 # 🚀 Overview
