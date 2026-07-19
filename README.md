@@ -276,7 +276,7 @@ Future possibilities include integration with:
 
 | Name | GitHub |
 |------|--------|
-| Bhoomi Jain | https://github.com/bhoomijn |
+| Bhoomi Jain | bhoomijn |
 | Sansu Kumar | @sansukumar57-dev |
 | Vansh Mani Tiwari | @1vansh-5 |
 
