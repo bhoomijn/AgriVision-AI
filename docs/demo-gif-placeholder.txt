@@ -1,0 +1,6 @@
+This is a placeholder to reserve the demo GIF path. Add the actual GIF at `docs/demo.gif`.
+
+Filename: docs/demo.gif
+Purpose: Demonstration animation showing app flow.
+
+To replace this placeholder, upload the real GIF file to docs/demo.gif.
