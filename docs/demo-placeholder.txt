@@ -1,0 +1,8 @@
+Demo placeholder for AgriVision-AI
+
+This file is a text placeholder for the demo GIF. To replace with an actual GIF, add a binary file at `docs/demo.gif`.
+
+Suggested demo steps:
+1. Run `python app.py` and open http://localhost:5000
+2. Upload a sample leaf image
+3. Observe prediction and confidence score
