@@ -212,6 +212,7 @@ The project is designed to support future integration with AI services, voice te
 | ------------ | ----------------------------------- |
 | Bhoomi Jain | https://github.com/bhoomijn         |
 | Sansu Kumar  | https://github.com/sansukumar57-dev |
+| Vansh  | https://github.com/1vansh-5 |
 
 **Team:** AI4India Innovators
 
