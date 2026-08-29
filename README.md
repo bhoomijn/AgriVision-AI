@@ -226,4 +226,4 @@ By combining Computer Vision, Vision Transformer technology, and a farmer-centri
 
 ---
 
-## 🌱 Built with ❤️ for Indian Farmers • Powered by Artificial Intelligence 🤖
+## 🌱 Built with ❤️ for Indian Farmers
