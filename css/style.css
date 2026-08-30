@@ -26,7 +26,7 @@ html {
 body {
 
     font-family: 'Poppins', sans-serif;
-    background: #061b10;
+    background: #77d15e;
     color: white;
     overflow-x: hidden;
 
@@ -37,12 +37,12 @@ body {
 
 :root {
 
-    --primary: #22c55e;
-    --secondary: #16a34a;
+    --primary: #6860de;
+    --secondary: #a97ce3;
     --dark: #061b10;
-    --card: rgba(255, 255, 255, 0.08);
-    --border: rgba(255, 255, 255, 0.15);
-    --text: #d1d5db;
+    --card: rgba(82, 213, 189, 0.08);
+    --border: rgba(12, 197, 163, 0.08);
+    --text: #6e96d3;
 
 }
 
@@ -58,7 +58,7 @@ body::before {
     width: 600px;
     height: 600px;
 
-    background: #22c55e;
+    background: #59eb89;
 
     filter: blur(180px);
 
@@ -82,7 +82,7 @@ body::after {
     width: 500px;
     height: 500px;
 
-    background: #16a34a;
+    background: #969997;
 
     filter: blur(180px);
 
