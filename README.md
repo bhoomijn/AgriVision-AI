@@ -14,6 +14,7 @@ An AI-powered platform that enables early crop disease detection, intelligent tr
 
 ## 🌐 Live Demo
 
+
 ### 🚀 Web Application
 
 🔗 https://agri-vision-1--vanshmanitiwari.replit.app/
