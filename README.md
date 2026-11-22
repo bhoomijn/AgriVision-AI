@@ -6,6 +6,7 @@
   <b>Empowering Indian Farmers with Artificial Intelligence 🌱🤖</b>
 </p>
 
+
 <p align="center">
 An AI-powered platform that enables early crop disease detection, intelligent treatment recommendations, and smarter farming decisions using Computer Vision and Vision Transformer (ViT) technology.
 </p>
